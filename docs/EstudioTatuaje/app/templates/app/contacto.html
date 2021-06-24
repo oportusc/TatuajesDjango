@@ -1,0 +1,61 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+{%block js%}
+
+{%endblock%}
+
+{%block css%}
+<link rel="stylesheet" href="{% static 'app/css/estilos.css'%}">
+<link rel="stylesheet" href="{% static 'app/css/estilo_form.css'%}">
+{%endblock%}
+
+{% block contenido%}
+
+{% load crispy_forms_tags %}
+<br>
+<br>
+<div class="container contact mt-5 pt-5">
+    <div class="row">
+        <div class="col-md-4  text-white text-md-start" id="contactame">
+            <img src="{% static 'app/img/logos/carta.png' %}" id="foto-contacto"alt="" />
+            <p id = "parrafo-contacto">Rellena este formulario para realizar consultas!!</p>
+        </div>
+        <div class="col-md-8" id = "estilo-form">
+            <form id="contact-formulario" method="POST" action="#" class="contact-form">
+                {% csrf_token %}
+                {{ form |crispy }}
+                <div class="form-group d-flex justify-content-end">
+                    <input type="reset" value="Limpiar" class="btn btn-secondary">
+                    &nbsp;    
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                </div>
+            </form>
+            {{mensaje}}
+        </div>
+    </div>
+
+{%endblock%}
+
+<!-- <div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" class="form-control"
+        placeholder="Ingrese su nombre" required>
+</div>
+<div class="form-group">
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="apellido" class="form-control" id="apellido"
+        placeholder="Ingrese su apellido" required>
+</div>
+<div class="form-group">
+    <label for="email">Correo:</label>
+    <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico"
+        required name="email">
+</div>
+<div class="form-group">
+
+    <label for="comment">Comentarios:</label>
+    <textarea class="form-control" rows="5" required id="comment"></textarea>
+
+</div> -->

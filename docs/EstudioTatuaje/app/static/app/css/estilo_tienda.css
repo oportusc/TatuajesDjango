@@ -1,0 +1,7 @@
+#card-roja{
+    background: #220000;
+}
+
+.fw-bolder, h4,h2,hr{
+    color: rgba(255,255,255,.55);
+}

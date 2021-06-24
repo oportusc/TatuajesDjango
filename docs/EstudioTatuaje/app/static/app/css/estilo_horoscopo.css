@@ -1,0 +1,33 @@
+.card {
+    background: #888787;    
+}
+.card-body{
+    color: #460505;
+}
+
+/* .card-body {
+    box-shadow: 2px 2px 5px #460505;
+  } */
+
+/* .card-body{
+    box-shadow: 2px 2px 10px #460505;  
+} */
+
+/* .card-body{
+    box-shadow: 2px -2px 0 1px #444;
+} */
+/* .card-body{
+    box-shadow: 5px 5px 25px #460505 inset
+} */
+/* div {
+    Sombra normal
+    box-shadow: 2px 2px 10px #666;
+    Sombra superior sin desenfoque
+    box-shadow: 5px -5px 0 2px #444;
+    Sombra interior
+    box-shadow: 5px 5px 25px #222 inset;
+} */
+
+.card-body{
+    height: auto;
+}
